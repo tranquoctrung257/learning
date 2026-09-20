@@ -1,0 +1,817 @@
+===============================================================================
+=  C h à o   m ừ n g   đ ế n   v ớ i   V I M   T u t o r  -  Phiên bản 1.5    =
+===============================================================================
+
+     Vim là một trình soạn thảo rất mạnh mẽ có rất nhiều lệnh, quá nhiều để
+     có thể giải thích hết trong một bài hướng dẫn như thế này. Bài hướng
+     dẫn này được thiết kế để mô tả đủ số lượng lệnh giúp bạn có thể dễ dàng
+     sử dụng Vim như một trình soạn thảo đa năng.
+
+     Thời gian ước tính cần thiết để hoàn thành bài hướng dẫn là 25-30 phút,
+     tùy thuộc vào việc bạn dành bao nhiêu thời gian để thử nghiệm.
+
+     Các lệnh trong các bài học sẽ sửa đổi văn bản. Hãy tạo một bản sao của
+     tệp này để thực hành (nếu bạn khởi chạy "vimtutor" thì đây đã là bản sao).
+
+     Điều quan trọng cần nhớ là bài hướng dẫn này được thiết lập để dạy qua
+     thực hành. Điều đó có nghĩa là bạn cần phải thực thi các lệnh để học
+     chúng đúng cách. Nếu bạn chỉ đọc văn bản, bạn sẽ quên mất các lệnh!
+
+     Bây giờ, hãy đảm bảo rằng phím Shift-Lock (hoặc Caps-Lock) của bạn KHÔNG
+     bị nhấn xuống và nhấn phím  j  đủ số lần để di chuyển con trỏ sao cho
+     Bài 1.1 lấp đầy hoàn toàn màn hình.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Bài 1.1:  DI CHUYỂN CON TRỎ
+
+
+   ** Để di chuyển con trỏ, hãy nhấn các phím h,j,k,l như được chỉ dẫn. **
+	     ^
+	     k		       Mẹo:   Phím h nằm bên trái và di chuyển sang trái.
+   < h	 l >		   Phím l nằm bên phải và di chuyển sang phải.
+	     j			   Phím j trông giống như một mũi tên trỏ xuống.
+	     v
+  1. Di chuyển con trỏ xung quanh màn hình cho đến khi bạn cảm thấy thoải mái.
+
+  2. Nhấn và giữ phím đi xuống (j) cho đến khi nó lặp lại.
+---> Bây giờ bạn đã biết cách chuyển sang bài học tiếp theo.
+
+  3. Sử dụng phím đi xuống, di chuyển đến Bài 1.2.
+
+Lưu ý: Nếu bạn không chắc chắn về điều gì đó mình vừa gõ, hãy nhấn <ESC> để 
+       đưa bạn về chế độ Normal (Bình thường). Sau đó gõ lại lệnh bạn muốn.
+
+Lưu ý: Các phím mũi tên cũng hoạt động. Nhưng việc sử dụng hjkl sẽ giúp bạn
+       có thể di chuyển nhanh hơn rất nhiều, một khi bạn đã quen với nó.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		     Bài 1.2: VÀO VÀ THOÁT VIM
+
+
+  !! LƯU Ý: Trước khi thực hiện bất kỳ bước nào dưới đây, hãy đọc toàn bộ bài học này!!
+
+  1. Nhấn phím <ESC> (để đảm bảo rằng bạn đang ở chế độ Normal).
+
+  2. Gõ:			:q! <ENTER>.
+
+---> Thao tác này sẽ thoát trình soạn thảo MÀ KHÔNG lưu lại bất kỳ thay đổi nào.
+     Nếu bạn muốn lưu các thay đổi và thoát, hãy gõ:
+				:wq  <ENTER>
+
+  3. Khi bạn nhìn thấy dấu nhắc lệnh (shell prompt), hãy gõ lệnh đã đưa bạn 
+     vào bài hướng dẫn này. Lệnh đó có thể là:	vimtutor <ENTER>
+     Thông thường bạn sẽ sử dụng:		vim tutor <ENTER>
+
+---> 'vim' có nghĩa là vào trình soạn thảo vim, 'tutor' là tệp bạn muốn chỉnh sửa.
+
+  4. Nếu bạn đã ghi nhớ các bước này và cảm thấy tự tin, hãy thực hiện các bước
+     từ 1 đến 3 để thoát và vào lại trình soạn thảo. Sau đó di chuyển con trỏ
+     xuống Bài 1.3.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		     Bài 1.3: CHỈNH SỬA VĂN BẢN - XÓA
+
+
+** Trong khi ở chế độ Normal, nhấn  x  để xóa ký tự nằm ngay dưới con trỏ. **
+
+  1. Di chuyển con trỏ xuống dòng bên dưới được đánh dấu --->.
+
+  2. Để sửa lỗi, hãy di chuyển con trỏ cho đến khi nó nằm trên ký tự cần xóa.
+
+  3. Nhấn phím  x  để xóa ký tự không mong muốn.
+
+  4. Lặp lại các bước từ 2 đến 4 cho đến khi câu trở nên chính xác.
+
+---> Ccoon bòò đã nhảảy quaa mặặtt trănng.
+
+  5. Bây giờ dòng đó đã chính xác, hãy tiếp tục với Bài 1.4.
+
+LƯU Ý: Khi bạn đi qua bài hướng dẫn này, đừng cố gắng ghi nhớ, hãy học qua
+       việc sử dụng thực tế.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		     Bài 1.4: CHỈNH SỬA VĂN BẢN - CHÈN
+
+
+	 ** Trong khi ở chế độ Normal, nhấn  i  để chèn văn bản. **
+
+  1. Di chuyển con trỏ đến dòng đầu tiên bên dưới được đánh dấu --->.
+
+  2. Để làm cho dòng đầu tiên giống dòng thứ hai, hãy di chuyển con trỏ lên
+     ký tự đầu tiên SAU vị trí cần chèn văn bản.
+
+  3. Nhấn  i  và gõ vào những phần bổ sung cần thiết.
+
+  4. Khi mỗi lỗi được sửa xong, nhấn <ESC> để trở về chế độ Normal.
+     Lặp lại các bước từ 2 đến 4 để sửa câu.
+
+---> Có văn bn bị thiế ở dòng này.
+---> Có văn bản bị thiếu ở dòng này.
+
+  5. Khi bạn đã cảm thấy thoải mái với việc chèn văn bản, hãy di chuyển xuống 
+     phần tóm tắt bên dưới.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			       TÓM TẮT BÀI 1
+
+
+  1. Con trỏ được di chuyển bằng cách sử dụng các phím mũi tên hoặc phím hjkl.
+	 h (trái)	j (xuống)       k (lên)	    l (phải)
+
+  2. Để vào Vim (từ dấu nhắc % hoặc $), hãy gõ:  vim TENTEP <ENTER>
+
+  3. Để thoát Vim, gõ:	   <ESC>   :q!	 <ENTER>  để vứt bỏ mọi thay đổi.
+	     HOẶC gõ:	   <ESC>   :wq	 <ENTER>  để lưu lại thay đổi.
+
+  4. Để xóa một ký tự dưới con trỏ trong chế độ Normal, gõ:  x
+
+  5. Để chèn văn bản tại vị trí con trỏ trong khi ở chế độ Normal, gõ:
+	 i     gõ văn bản cần chèn	<ESC>
+
+LƯU Ý: Nhấn <ESC> sẽ đưa bạn về chế độ Normal hoặc sẽ hủy bỏ một lệnh không
+       mong muốn và đang được thực hiện dang dở.
+
+Bây giờ hãy tiếp tục với Bài 2.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Bài 2.1: CÁC LỆNH XÓA
+
+
+	    ** Gõ  dw  để xóa cho đến cuối một từ. **
+
+  1. Nhấn  <ESC>  để đảm bảo bạn đang ở chế độ Normal.
+
+  2. Di chuyển con trỏ xuống dòng bên dưới được đánh dấu --->.
+
+  3. Di chuyển con trỏ đến đầu của một từ cần được xóa.
+
+  4. Gõ   dw	 để làm từ đó biến mất.
+
+  LƯU Ý: Các chữ cái dw sẽ xuất hiện ở dòng cuối cùng của màn hình khi bạn gõ
+	 chúng. Nếu bạn gõ sai thứ gì đó, hãy nhấn  <ESC>  và làm lại từ đầu.
+
+---> Có một vài từ vui không thuộc giấy về câu này.
+
+  5. Lặp lại các bước 3 và 4 cho đến khi câu chính xác và đi tới Bài 2.2.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		      Bài 2.2: THÊM CÁC LỆNH XÓA
+
+
+	   ** Gõ  d$  để xóa cho đến cuối dòng. **
+
+  1. Nhấn  <ESC>  để đảm bảo bạn đang ở chế độ Normal.
+
+  2. Di chuyển con trỏ xuống dòng bên dưới được đánh dấu --->.
+
+  3. Di chuyển con trỏ đến cuối của đoạn đúng (SAU dấu . đầu tiên).
+
+  4. Gõ    d$    để xóa đến phần cuối của dòng.
+
+---> Ai đó đã gõ phần cuối của dòng này hai lần. cuối của dòng này hai lần.
+
+
+  5. Di chuyển đến Bài 2.3 để hiểu chuyện gì đang xảy ra.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		     Bài 2.3: VỀ LỆNH VÀ ĐỐI TƯỢNG
+
+
+  Định dạng cho lệnh xóa  d  như sau:
+
+	 [số lượng]   d	  đối tượng    HOẶC     d	 [số lượng]   đối tượng
+  Trong đó:
+    số lượng - là số lần thực thi lệnh (tùy chọn, mặc định=1).
+    d - là lệnh để xóa.
+    đối tượng - là những gì lệnh sẽ tác động lên (được liệt kê bên dưới).
+
+  Một danh sách ngắn các đối tượng:
+    w - từ con trỏ đến cuối từ, bao gồm cả khoảng trắng.
+    e - từ con trỏ đến cuối từ, KHÔNG bao gồm khoảng trắng.
+    $ - từ con trỏ đến phần cuối của dòng.
+
+LƯU Ý: Đối với những người thích khám phá, chỉ cần nhấn đối tượng trong khi 
+       ở chế độ Normal mà không có lệnh sẽ di chuyển con trỏ theo quy định 
+       của danh sách đối tượng.
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Bài 2.4: MỘT NGOẠI LỆ CỦA 'LỆNH-ĐỐI TƯỢNG'
+
+
+	       ** Gõ   dd   để xóa toàn bộ một dòng. **
+
+  Do tần suất xóa toàn bộ dòng diễn ra rất thường xuyên, các nhà thiết kế 
+  của Vim đã quyết định sẽ dễ dàng hơn nếu chỉ cần gõ hai chữ d liên tiếp 
+  để xóa một dòng.
+
+  1. Di chuyển con trỏ đến dòng thứ hai trong đoạn văn dưới đây.
+  2. Gõ  dd  để xóa dòng đó.
+  3. Bây giờ di chuyển xuống dòng thứ tư.
+  4. Gõ   2dd   (nhớ quy tắc số_lượng-lệnh-đối_tượng) để xóa cả hai dòng.
+
+      1)  Hoa hồng màu đỏ,
+      2)  Bùn rất vui,
+      3)  Hoa violet màu xanh,
+      4)  Tôi có một chiếc xe,
+      5)  Đồng hồ báo giờ,
+      6)  Đường thì ngọt
+      7)  Và bạn cũng vậy.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			 Bài 2.5: LỆNH HOÀN TÁC (UNDO)
+
+
+   ** Nhấn  u  để hoàn tác các lệnh vừa qua,  U  để sửa lại cả một dòng. **
+
+  1. Di chuyển con trỏ đến dòng bên dưới được đánh dấu ---> và đặt nó ở
+     lỗi đầu tiên.
+  2. Gõ  x  để xóa ký tự lỗi đầu tiên.
+  3. Bây giờ gõ  u  để hoàn tác (undo) lệnh cuối cùng vừa được thực thi.
+  4. Lần này hãy sửa tất cả các lỗi trên dòng bằng cách sử dụng lệnh  x .
+  5. Bây giờ gõ một chữ  U  viết hoa để đưa dòng đó trở về trạng thái ban đầu.
+  6. Bây giờ gõ  u  vài lần để hoàn tác lệnh U và các lệnh trước đó.
+  7. Bây giờ nhấn CTRL-R (giữ phím CTRL trong khi nhấn phím R) vài lần
+     để làm lại (redo) các lệnh (nghĩa là hoàn tác các thao tác undo).
+
+---> Sữửa cáác lỗỗi trêên dòòng nàày và thhay thhế chúúng bằằng uundo.
+
+  8. Đây là các lệnh rất hữu ích. Bây giờ hãy di chuyển đến Tóm tắt Bài 2.
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			       TÓM TẮT BÀI 2
+
+
+  1. Để xóa từ vị trí con trỏ đến cuối một từ, gõ:    dw
+
+  2. Để xóa từ vị trí con trỏ đến cuối một dòng, gõ:    d$
+
+  3. Để xóa toàn bộ một dòng, gõ:    dd
+
+  4. Định dạng của một lệnh trong chế độ Normal là:
+
+       [số_lượng]   lệnh   đối_tượng     HOẶC     lệnh	[số_lượng]   đối_tượng
+     trong đó:
+       số_lượng - là số lần lặp lại lệnh đó
+       lệnh - là thao tác cần làm, chẳng hạn  d  dùng để xóa (delete)
+       đối_tượng - là thành phần mà lệnh sẽ tác động lên, ví dụ  w (từ - word),
+		$ (đến cuối dòng), v.v.
+
+  5. Để hoàn tác các hành động trước đó, gõ:	      u	 (chữ u viết thường)
+     Để hoàn tác mọi thay đổi trên một dòng gõ:       U	 (chữ U viết hoa)
+     Để làm lại (bỏ hoàn tác), nhấn:		      CTRL-R
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			 Bài 3.1: LỆNH ĐẶT (PUT)
+
+
+       ** Gõ  p  để đặt (dán) đoạn vừa xóa vào sau con trỏ. **
+
+  1. Di chuyển con trỏ đến dòng đầu tiên trong tập hợp dưới đây.
+
+  2. Gõ  dd  để xóa dòng đó và lưu nó vào bộ đệm của Vim.
+
+  3. Di chuyển con trỏ đến dòng NẰM TRÊN vị trí mà dòng bị xóa cần được đưa vào.
+
+  4. Trong khi ở chế độ Normal, gõ    p	 để dán dòng đó.
+
+  5. Lặp lại các bước 2 đến 4 để sắp xếp tất cả các dòng theo đúng thứ tự.
+
+     d) Bạn cũng có thể học chứ?
+     b) Hoa violet màu xanh,
+     c) Trí thông minh được học hỏi,
+     a) Hoa hồng màu đỏ,
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		       Bài 3.2: LỆNH THAY THẾ (REPLACE)
+
+
+  ** Gõ  r  và một ký tự để thay thế ký tự nằm bên dưới con trỏ. **
+
+  1. Di chuyển con trỏ đến dòng đầu tiên bên dưới được đánh dấu --->.
+
+  2. Di chuyển con trỏ để nó nằm trên lỗi đầu tiên.
+
+  3. Gõ   r	và sau đó gõ ký tự đúng sẽ dùng để thay thế lỗi đó.
+
+  4. Lặp lại các bước 2 và 3 cho đến khi dòng đầu tiên chính xác.
+
+--->  Khhi dòmg này đượcc gõõ vào, ai đó đã nhấnn vàii phím saai!
+--->  Khi dòng này được gõ vào, ai đó đã nhấn vài phím sai!
+
+  5. Bây giờ chuyển sang Bài 3.3.
+
+LƯU Ý: Nhớ rằng bạn nên học qua việc sử dụng thực tế, không phải cố ghi nhớ.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Bài 3.3: LỆNH THAY ĐỔI (CHANGE)
+
+
+	   ** Để thay đổi một phần hoặc toàn bộ từ, gõ  cw . **
+
+  1. Di chuyển con trỏ đến dòng đầu tiên bên dưới được đánh dấu --->.
+
+  2. Đặt con trỏ lên chữ u trong từ lukw.
+
+  3. Gõ  cw  và gõ từ chính xác (trong trường hợp này, gõ 'òng'.)
+
+  4. Nhấn <ESC> và di chuyển đến lỗi tiếp theo (ký tự đầu tiên cần thay đổi.)
+
+  5. Lặp lại bước 3 và 4 cho đến khi câu đầu tiên giống hệt câu thứ hai.
+
+---> Dòng lukw có vài tfd cần đưrrc thay đkkw bằng ccác dùng lệtg change.
+---> Dòng này có vài từ cần được thay đổi bằng cách dùng lệnh change.
+
+Lưu ý rằng  cw  không chỉ thay thế từ, mà nó còn đưa bạn vào chế độ chèn (insert).
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		       Bài 3.4: THÊM CÁC THAY ĐỔI BẰNG c
+
+
+     ** Lệnh thay đổi được sử dụng với cùng các đối tượng như lệnh xóa. **
+
+  1. Lệnh thay đổi hoạt động theo cùng một cách với lệnh xóa. Định dạng là:
+
+       [số_lượng]   c   đối_tượng	   HOẶC	    c	[số_lượng]   đối_tượng
+
+  2. Các đối tượng cũng giống nhau, như   w (từ), $ (cuối dòng), v.v.
+
+  3. Di chuyển đến dòng đầu tiên bên dưới được đánh dấu --->.
+
+  4. Di chuyển con trỏ đến lỗi đầu tiên.
+
+  5. Gõ  c$  để làm cho phần còn lại của dòng giống như dòng thứ hai và nhấn <ESC>.
+
+---> Phần cuối của dòng này cần vài sự giúp đỡ để làm nó giống dòng thứ hai.
+---> Phần cuối của dòng này cần được sửa lại bằng lệnh  c$ .
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			       TÓM TẮT BÀI 3
+
+
+  1. Để đặt (dán) văn bản vừa mới bị xóa, hãy gõ   p . Lệnh này đặt văn bản
+     đã xóa vào SAU con trỏ (nếu một dòng bị xóa, nó sẽ đi vào dòng bên 
+     dưới con trỏ).
+
+  2. Để thay thế ký tự nằm dưới con trỏ, gõ   r   và theo sau là ký tự sẽ 
+     dùng để thay thế ký tự ban đầu.
+
+  3. Lệnh thay đổi (change) cho phép bạn thay đổi đối tượng được chỉ định từ
+     con trỏ đến phần cuối của đối tượng. ví dụ. Gõ  cw  để thay đổi từ con
+     trỏ đến cuối một từ, c$  để thay đổi từ con trỏ đến cuối dòng.
+
+  4. Định dạng cho lệnh thay đổi là:
+
+	 [số_lượng]   c	  đối_tượng	  HOẶC	    c   [số_lượng]   đối_tượng
+
+Bây giờ hãy chuyển sang bài học tiếp theo.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		     Bài 4.1: VỊ TRÍ VÀ TRẠNG THÁI TỆP
+
+
+  ** Nhấn CTRL-g để hiển thị vị trí của bạn trong tệp và trạng thái tệp.
+     Nhấn SHIFT-G để di chuyển đến một dòng cụ thể trong tệp. **
+
+  Lưu ý: Hãy đọc toàn bộ bài học này trước khi thực thi bất kỳ bước nào!!
+
+  1. Nhấn giữ phím Ctrl và nhấn  g . Một dòng trạng thái sẽ xuất hiện ở cuối
+     trang kèm theo tên tệp và dòng bạn đang ở. Hãy nhớ lấy số dòng đó
+     cho Bước 3.
+
+  2. Nhấn shift-G để di chuyển bạn xuống cuối tệp.
+
+  3. Gõ số dòng mà bạn đã ghi nhớ lúc nãy và sau đó nhấn shift-G. Thao tác 
+     này sẽ đưa bạn về đúng dòng mà bạn đang đứng lúc nhấn Ctrl-g lần đầu.
+     (Khi bạn gõ các con số, chúng sẽ KHÔNG hiển thị trên màn hình.)
+
+  4. Nếu bạn cảm thấy tự tin, hãy thực thi các bước từ 1 đến 3.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Bài 4.2: LỆNH TÌM KIẾM
+
+
+     ** Gõ  /  theo sau là một cụm từ để tìm kiếm cụm từ đó. **
+
+  1. Trong chế độ Normal gõ ký tự  / . Lưu ý rằng nó và con trỏ sẽ xuất 
+     hiện ở dưới cùng của màn hình giống như với lệnh  : .
+
+  2. Bây giờ gõ 'lỗỗi' <ENTER>. Đây là từ mà bạn muốn tìm kiếm.
+
+  3. Để tìm kiếm lại cụm từ tương tự, chỉ cần gõ  n .
+     Để tìm kiếm cụm từ tương tự theo hướng ngược lại, gõ  Shift-N .
+
+  4. Nếu bạn muốn tìm kiếm một cụm từ theo hướng lùi về phía sau, hãy dùng
+     lệnh  ?  thay vì /.
+
+---> Khi quá trình tìm kiếm chạm đến cuối tệp, nó sẽ tiếp tục lại từ đầu.
+
+  "lỗỗi" không phải là cách viết đúng của từ lỗi; lỗỗi là một lỗi.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		   Bài 4.3: TÌM KIẾM DẤU NGOẶC TƯƠNG ỨNG
+
+
+	      ** Gõ  %  để tìm một cặp tương ứng với ),], hoặc } . **
+
+  1. Đặt con trỏ lên bất kỳ dấu (, [, hoặc { nào ở dòng dưới được đánh dấu --->.
+
+  2. Bây giờ gõ ký tự  % .
+
+  3. Con trỏ sẽ nhảy đến dấu ngoặc hoặc ngoặc vuông đóng tương ứng.
+
+  4. Gõ  %  để di chuyển con trỏ trở lại dấu ngoặc đầu tiên (theo cặp chéo).
+
+---> Dòng ( này là dòng kiểm tra với các dấu ( , [ ] và { } ở trong nó. ))
+
+Lưu ý: Điều này rất hữu ích khi gỡ lỗi một chương trình có dấu ngoặc bị thiếu!
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		      Bài 4.4: MỘT CÁCH ĐỂ SỬA LỖI
+
+
+	** Gõ  :s/cũ/mới/g  để thay thế 'cũ' bằng 'mới'. **
+
+  1. Di chuyển con trỏ đến dòng bên dưới được đánh dấu --->.
+
+  2. Gõ  :s/nhữg/những <ENTER> . Lưu ý rằng lệnh này chỉ thay đổi 
+     sự xuất hiện đầu tiên của từ trên dòng đó.
+
+  3. Bây giờ gõ    :s/nhữg/những/g    có nghĩa là thay thế trên toàn bộ dòng.
+     Thao tác này thay đổi mọi từ xuất hiện trên dòng đó.
+
+---> nhữg lúc đẹp nhất để ngắm nhữg bông hoa là vào nhữg ngày mùa xuân.
+
+  4. Để thay đổi mỗi sự xuất hiện của một chuỗi ký tự giữa hai dòng cụ thể,
+     gõ   :#,#s/cũ/mới/g    trong đó #,# là các số thứ tự của hai dòng đó.
+     Gõ   :%s/cũ/mới/g    để thay đổi mọi sự xuất hiện trong toàn bộ tệp.
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			       TÓM TẮT BÀI 4
+
+
+  1. Ctrl-g  hiển thị vị trí của bạn trong tệp và trạng thái tệp.
+     Shift-G  di chuyển đến cuối tệp. Một con số đứng trước 
+     Shift-G  sẽ di chuyển đến đúng số thứ tự dòng đó.
+
+  2. Gõ  /	theo sau bởi một cụm từ sẽ tìm kiếm TỚI TRƯỚC cụm từ đó.
+     Gõ  ?	theo sau bởi một cụm từ sẽ tìm kiếm NGƯỢC LẠI cụm từ đó.
+     Sau một lần tìm kiếm, gõ  n  để tìm sự xuất hiện tiếp theo theo cùng chiều
+     hoặc  Shift-N  để tìm kiếm theo chiều ngược lại.
+
+  3. Gõ  %	trong khi con trỏ đang ở trên các dấu  (,),[,],{, hoặc }  
+     sẽ tìm vị trí cặp tương ứng của nó.
+
+  4. Để thay thế "mới" cho từ "cũ" đầu tiên trên một dòng, gõ    :s/cũ/mới
+     Để thay thế "mới" cho mọi từ "cũ" trên một dòng, gõ	 :s/cũ/mới/g
+     Để thay thế các cụm từ giữa hai số dòng, gõ	         :#,#s/cũ/mới/g
+     Để thay thế mọi sự xuất hiện trong tệp, gõ	                 :%s/cũ/mới/g
+     Để hỏi xác nhận cho mỗi lần thay thế, thêm 'c'		 :%s/cũ/mới/gc
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Bài 5.1: CÁCH THỰC THI MỘT LỆNH BÊN NGOÀI
+
+
+   ** Gõ  :!  theo sau bởi một lệnh bên ngoài để thực thi lệnh đó. **
+
+  1. Gõ lệnh quen thuộc	:  để đặt con trỏ ở phía dưới cùng của
+     màn hình. Điều này cho phép bạn nhập vào một lệnh.
+
+  2. Bây giờ gõ ký tự  !  (dấu chấm than). Ký tự này cho phép bạn
+     thực thi bất kỳ lệnh shell bên ngoài nào.
+
+  3. Ví dụ như gõ   ls   ngay sau dấu ! và sau đó nhấn <ENTER>. Điều này
+     sẽ hiển thị cho bạn danh sách thư mục của bạn, giống như khi bạn đang 
+     ở dấu nhắc lệnh của shell. Hoặc dùng   :!dir  nếu ls không hoạt động.
+
+---> Lưu ý:  Có thể thực thi bất kỳ lệnh bên ngoài nào bằng cách này.
+
+---> Lưu ý:  Tất cả các lệnh  :  đều phải được kết thúc bằng cách nhấn <ENTER>
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		      Bài 5.2: THÊM VỀ VIẾT LƯU TỆP
+
+
+     ** Để lưu những thay đổi vào tệp, hãy gõ  :w TENTEP. **
+
+  1. Gõ  :!dir  hoặc  :!ls  để xem danh sách các tệp trong thư mục của bạn.
+     Bạn đã biết rằng mình phải nhấn <ENTER> sau lệnh này.
+
+  2. Chọn một tên tệp chưa tồn tại, chẳng hạn như TEST.
+
+  3. Bây giờ gõ:	 :w TEST   (trong đó TEST là tên tệp bạn đã chọn.)
+
+  4. Thao tác này lưu toàn bộ tệp	(Vim Tutor)  dưới cái tên TEST.
+     Để kiểm tra, hãy gõ    :!dir   lần nữa để xem thư mục của bạn.
+
+---> Lưu ý rằng nếu bạn thoát Vim và vào lại với tên tệp là TEST,
+     tệp đó sẽ là một bản sao chính xác của tutor tại thời điểm bạn lưu nó.
+
+  5. Bây giờ xóa tệp bằng cách gõ (MS-DOS):    :!del TEST
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		    Bài 5.3: LỆNH GHI LƯU CÓ CHỌN LỌC
+
+
+	** Để lưu một phần của tệp, hãy gõ   :#,# w TENTEP **
+
+  1. Lần nữa, gõ  :!dir  hoặc  :!ls  để lấy danh sách thư mục của bạn
+     và chọn một tên tệp phù hợp như là TEST.
+
+  2. Di chuyển con trỏ lên đầu trang này và gõ  Ctrl-g  để tìm số thứ 
+     tự của dòng đó. HÃY NHỚ SỐ NÀY!
+
+  3. Bây giờ di chuyển xuống cuối trang và gõ  Ctrl-g một lần nữa. HÃY NHỚ
+     SỐ DÒNG NÀY NỮA!
+
+  4. Để CHỈ lưu một đoạn vào một tệp, gõ   :#,# w TEST   trong đó #,# là
+     hai con số bạn vừa ghi nhớ (trên, dưới) và TEST là tên tệp của bạn.
+
+  5. Lần nữa, hãy xem tệp đó có ở đó không với lệnh  :!dir  nhưng ĐỪNG xóa nó.
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		   Bài 5.4: LẤY VÀ HỢP NHẤT TỆP
+
+
+       ** Để chèn nội dung của một tệp, gõ   :r TENTEP **
+
+  1. Gõ   :!dir   để đảm bảo rằng tệp TEST của bạn từ trước đó vẫn đang ở đó.
+
+  2. Đặt con trỏ ở phía đầu của trang này.
+
+LƯU Ý: Sau khi thực hiện Bước 3, bạn sẽ thấy Bài 5.3. Sau đó di chuyển XUỐNG
+       bài học này một lần nữa.
+
+  3. Bây giờ hãy lấy tệp TEST của bạn bằng lệnh   :r TEST   trong đó TEST là
+     tên của tệp đó.
+
+LƯU Ý: Tệp mà bạn vừa lấy ra sẽ được đặt bắt đầu từ vị trí mà con trỏ đang đứng.
+
+  4. Để xác nhận rằng tệp đã được lấy ra, hãy di chuyển con trỏ lùi lại và lưu ý
+     rằng bây giờ đã có hai bản sao của Bài 5.3, bản gốc và bản từ tệp.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			       TÓM TẮT BÀI 5
+
+
+  1.  :!lệnh  thực thi một lệnh bên ngoài (lệnh hệ điều hành).
+
+      Một số ví dụ hữu ích là (MS-DOS):
+	  :!dir			-  hiển thị danh sách thư mục.
+	  :!del TENTEP		-  xóa tệp TENTEP.
+
+  2.  :w TENTEP  ghi tệp Vim hiện hành vào ổ đĩa với tên là TENTEP.
+
+  3.  :#,#w TENTEP  lưu các dòng từ # đến # vào tệp có tên TENTEP.
+
+  4.  :r TENTEP  lấy tệp từ ổ đĩa có tên TENTEP và chèn nó vào tệp 
+      hiện hành ngay sau vị trí của con trỏ.
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			 Bài 6.1: LỆNH MỞ (OPEN)
+
+
+ ** Gõ  o  để mở một dòng mới bên dưới con trỏ và đưa bạn vào chế độ Chèn. **
+
+  1. Di chuyển con trỏ đến dòng bên dưới được đánh dấu --->.
+
+  2. Gõ  o (chữ thường) để mở ra một dòng BÊN DƯỚI con trỏ và đưa bạn vào 
+     chế độ Insert (Chèn).
+
+  3. Bây giờ hãy sao chép dòng được đánh dấu ---> và nhấn <ESC> để thoát 
+     chế độ Insert.
+
+---> Sau khi gõ  o  con trỏ được đặt trên một dòng trống ở chế độ Insert.
+
+  4. Để mở ra một dòng BÊN TRÊN con trỏ, chỉ cần gõ một chữ  O  viết hoa,
+     thay vì chữ o viết thường. Hãy thử nó ở dòng bên dưới.
+Mở ra một dòng bên trên dòng này bằng cách gõ Shift-O trong lúc con trỏ ở trên dòng này.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Bài 6.2: LỆNH NỐI THÊM (APPEND)
+
+
+	     ** Gõ  a  để chèn văn bản SAU con trỏ. **
+
+  1. Di chuyển con trỏ đến cuối dòng đầu tiên được đánh dấu ---> bên dưới bằng
+     cách gõ  $	 trong chế độ Normal.
+
+  2. Gõ một chữ  a  (chữ thường) để nối thêm văn bản SAU ký tự đang nằm dưới
+     con trỏ. (Chữ  A  viết hoa sẽ nối thêm vào cuối dòng.)
+
+Lưu ý: Điều này giúp tránh việc phải gõ  i , ký tự cuối cùng, văn bản cần chèn, 
+       <ESC>, mũi tên phải, và cuối cùng là, x , chỉ để chèn thêm vào cuối dòng!
+
+  3. Bây giờ hãy hoàn thành dòng đầu tiên. Hãy nhớ rằng lệnh append giống hệt như
+     chế độ Insert, chỉ khác vị trí nơi văn bản được chèn vào.
+
+---> Dòng này sẽ cho phép bạn thực hành
+---> Dòng này sẽ cho phép bạn thực hành nối thêm văn bản vào phần cuối của dòng.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		    Bài 6.3: MỘT PHIÊN BẢN KHÁC CỦA LỆNH THAY THẾ
+
+
+      ** Gõ một chữ  R  viết hoa để thay thế nhiều hơn một ký tự. **
+
+  1. Di chuyển con trỏ đến dòng đầu tiên bên dưới được đánh dấu --->.
+
+  2. Đặt con trỏ ở phần đầu của từ đầu tiên khác biệt so với dòng thứ hai
+     được đánh dấu ---> (từ 'cuối').
+
+  3. Bây giờ gõ  R  và thay thế phần còn lại của văn bản trên dòng đầu tiên
+     bằng cách gõ đè lên văn bản cũ để làm dòng đầu tiên giống với dòng thứ hai.
+
+---> Để làm dòng đầu tiên giống với dòng cuối ở trang này hãy sử dụng các phím.
+---> Để làm dòng đầu tiên giống với dòng thứ hai, gõ R và đoạn văn bản mới.
+
+  4. Lưu ý rằng khi bạn nhấn <ESC> để thoát, mọi văn bản không bị thay đổi 
+     vẫn sẽ giữ nguyên.
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			    Bài 6.4: CÀI ĐẶT TÙY CHỌN
+
+
+	  ** Bật một tùy chọn để lệnh tìm kiếm hay thay thế phớt lờ kiểu chữ **
+
+
+  1. Tìm kiếm từ 'ignore' bằng cách gõ:
+     /ignore
+     Lặp lại nhiều lần bằng cách nhấn phím n
+
+  2. Bật tùy chọn 'ic' (Ignore case - Phớt lờ kiểu chữ hoa/thường) bằng cách gõ:
+     :set ic
+
+  3. Bây giờ tìm kiếm từ 'ignore' lại bằng cách gõ: n
+     Lặp lại tìm kiếm thêm nhiều lần nữa bằng cách nhấn phím n
+
+  4. Bật tùy chọn 'hlsearch' và 'incsearch':
+     :set hls is
+
+  5. Bây giờ nhập lại lệnh tìm kiếm và xem chuyện gì sẽ xảy ra:
+     /ignore
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			       TÓM TẮT BÀI 6
+
+
+  1. Gõ  o	mở ra một dòng BÊN DƯỚI con trỏ và đặt con trỏ lên dòng mới
+     mở đó ở chế độ Insert (Chèn).
+     Gõ một chữ  O  viết hoa sẽ mở dòng BÊN TRÊN dòng mà con trỏ đang đứng.
+
+  2. Gõ một chữ  a  để chèn văn bản SAU ký tự mà con trỏ đang nằm lên.
+     Gõ một chữ  A  viết hoa sẽ tự động nối thêm văn bản vào cuối dòng.
+
+  3. Gõ một chữ  R  viết hoa sẽ vào chế độ Replace (Thay thế) cho đến khi 
+     nhấn <ESC> để thoát.
+
+  4. Gõ ":set xxx" sẽ thiết lập tùy chọn "xxx"
+
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		       BÀI 7: CÁC LỆNH TRỢ GIÚP TRỰC TUYẾN
+
+
+		      ** Sử dụng hệ thống trợ giúp trực tuyến **
+
+  Vim có một hệ thống trợ giúp trực tuyến toàn diện. Để bắt đầu, hãy thử 
+  một trong ba cách sau:
+	- nhấn phím <HELP> (nếu bạn có phím này)
+	- nhấn phím <F1> (nếu bạn có phím này)
+	- gõ   :help <ENTER>
+
+  Gõ   :q <ENTER>   để đóng cửa sổ trợ giúp.
+
+  Bạn có thể tìm thấy trợ giúp về gần như mọi chủ đề, bằng cách đưa thêm một 
+  đối số vào sau lệnh ":help". Thử những lệnh này (đừng quên nhấn <ENTER>):
+
+	:help w
+	:help c_<T
+	:help insert-index
+	:help user-manual
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		       BÀI 8: TẠO KỊCH BẢN KHỞI ĐỘNG
+
+			  ** Bật các tính năng của Vim **
+
+  Vim có nhiều tính năng hơn Vi rất nhiều, nhưng hầu hết chúng bị tắt đi 
+  theo mặc định. Để bắt đầu sử dụng nhiều tính năng hơn, bạn phải tạo một 
+  tệp "vimrc".
+
+  1. Bắt đầu chỉnh sửa tệp "vimrc", điều này phụ thuộc vào hệ thống của bạn:
+	:edit ~/.vimrc			cho Unix
+	:edit $VIM/_vimrc		cho MS-Windows
+
+  2. Bây giờ đọc vào đoạn văn bản tệp "vimrc" ví dụ:
+
+	:read $VIMRUNTIME/vimrc_example.vim
+
+  3. Ghi lại tệp với lệnh:
+
+	:write
+
+  Lần tới khi bạn khởi động Vim, nó sẽ sử dụng tính năng đánh dấu cú pháp 
+  (syntax highlighting). Bạn có thể thêm tất cả các cài đặt ưa thích của 
+  mình vào tệp "vimrc" này.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Đến đây là kết thúc phần Vim Tutor. Nó được tạo ra nhằm cung cấp một cái 
+  nhìn tổng quan ngắn gọn về trình soạn thảo Vim, vừa đủ để cho phép bạn 
+  sử dụng trình soạn thảo một cách khá dễ dàng. Nó vẫn còn chưa đầy đủ vì Vim 
+  có thêm rất nhiều, rất nhiều các lệnh khác. Hãy đọc tài liệu hướng dẫn sử 
+  dụng sau khi hoàn thành: ":help user-manual".
+
+  Để đọc và nghiên cứu thêm, quyển sách này rất được đề xuất:
+	Vim - Vi Improved - tác giả Steve Oualline
+	Nhà xuất bản: New Riders
+  Cuốn sách đầu tiên hoàn toàn cống hiến cho Vim. Đặc biệt hữu ích đối với
+  người mới bắt đầu. Có rất nhiều ví dụ và hình ảnh.
+  Xem tại http://iccf-holland.org/click5.html
+
+  Cuốn sách này cũ hơn và viết về Vi nhiều hơn là về Vim, nhưng cũng được đề xuất:
+	Learning the Vi Editor - tác giả Linda Lamb
+	Nhà xuất bản: O'Reilly & Associates Inc.
+  Đó là một cuốn sách tốt để tìm hiểu hầu như bất kỳ điều gì bạn muốn làm
+  với Vi. Ấn bản thứ sáu cũng bao gồm thông tin về Vim.
+
+  Bài hướng dẫn (tutorial) này được viết bởi Michael C. Pierce và Robert K. Ware,
+  thuộc Colorado School of Mines với các ý tưởng được cung cấp bởi Charles Smith,
+  thuộc Colorado State University. E-mail: bware@mines.colorado.edu.
+
+  Được sửa đổi cho Vim bởi Bram Moolenaar.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
