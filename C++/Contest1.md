@@ -1,8 +1,33 @@
 # Cấu trúc rẽ nhánh (Kiểu dữ liệu - IF ELSE)
 
+---
 
+## Bài 1. Tính toán giá trị của biểu thức
 
-## [Kiểu dữ liệu-IF ELSE]. Bài 2. Tính toán giá trị biểu thức 2
+Cho biểu thức $A(x) = x^3 + 3x^2 + x + 1$. Với giá trị của $x$ được nhập từ bàn phím, tính và in ra giá trị của biểu thức trên.
+
+### Input Format
+Số nguyên $x$.
+
+### Constraints
+$-10^5 \le x \le 10^5$
+
+### Output Format
+In ra kết quả của biểu thức.
+
+### Sample Input 0
+```
+2
+```
+
+### Sample Output 0
+```
+23
+```
+
+---
+
+## Bài 2. Tính toán giá trị biểu thức 2
 
 **Yêu cầu:** Cho ba số nguyên $a, b$ và $c$, hãy tính $S = a \times (b + c) + b \times (a + c)$.
 
@@ -27,36 +52,50 @@ In ra giá trị của biểu thức.
 
 ---
 
-## [Kiểu dữ liệu-IF ELSE]. Bài 3. Đổi nhiệt độ
+## Bài 3. Tổng, hiệu, tích, thương
 
-Công thức chuyển đơn vị đo nhiệt độ từ C sang F như sau: 
+Nhập vào 2 số nguyên, in ra tổng, hiệu, tích, thương (lấy độ chính xác với 4 chữ số sau dấu phẩy) của 2 số đó.
 
-$$F = \frac{C \times 9}{5} + 32$$
-
-Viết chương trình cho phép nhập vào nhiệt độ đo theo độ C là số nguyên không âm không quá $10^6$, thực hiện chuyển sang đơn vị đo độ F và in ra màn hình. *(Lưu ý luôn lấy 2 chữ số thập phân sau dấu phẩy)*.
+*Lưu ý:* Cần chú ý xử lý tràn số khi tính tích và trường hợp chia cho 0.
 
 ### Input Format
-Nhiệt độ ở độ C là một số nguyên không âm.
+2 số nguyên $a, b$ trên 1 dòng.
 
 ### Constraints
-$0 \le n \le 10^6$
+$-10^8 \le a, b \le 10^8$
 
 ### Output Format
-Kết quả đổi từ độ C sang độ F.
+In ra tổng, hiệu, tích, thương trên từng dòng. Nếu trường hợp không thể tìm được thương của 2 số (chia cho 0) thì in ra `"INVALID"` cho dòng kết quả của thương.
 
 ### Sample Input 0
 ```
-24
+7769 0
 ```
 
 ### Sample Output 0
 ```
-75.20
+7769
+7769
+0
+INVALID
+```
+
+### Sample Input 1
+```
+9794 1282
+```
+
+### Sample Output 1
+```
+11076
+8512
+12555908
+7.6396
 ```
 
 ---
 
-## [Kiểu dữ liệu-IF ELSE]. Bài 4. Chu vi và diện tích hình tròn
+## Bài 4. Chu vi và diện tích hình tròn
 
 Cho bán kính $R$ của hình tròn. Yêu cầu tính chu vi và diện tích của hình tròn đó. Lấy $\pi = 3.14$.
 
@@ -109,8 +148,71 @@ In ra khoảng cách giữa 2 điểm, lấy độ chính xác 2 số sau dấu 
 ```
 
 ---
+## [Kiểu dữ liệu-IF ELSE]. Bài 6. Đổi nhiệt độ
 
-## [Kiểu dữ liệu-IF ELSE]. Bài 6. Luyện tập viết câu điều kiện
+Công thức chuyển đơn vị đo nhiệt độ từ C sang F như sau: 
+
+$$F = \frac{C \times 9}{5} + 32$$
+
+Viết chương trình cho phép nhập vào nhiệt độ đo theo độ C là số nguyên không âm không quá $10^6$, thực hiện chuyển sang đơn vị đo độ F và in ra màn hình. *(Lưu ý luôn lấy 2 chữ số thập phân sau dấu phẩy)*.
+
+### Input Format
+Nhiệt độ ở độ C là một số nguyên không âm.
+
+### Constraints
+$0 \le n \le 10^6$
+
+### Output Format
+Kết quả đổi từ độ C sang độ F.
+
+### Sample Input 0
+```
+24
+```
+
+### Sample Output 0
+```
+75.20
+```
+
+---
+
+## [Kiểu dữ liệu-IF ELSE]. Bài 7. Số lớn nhất và nhỏ nhất
+
+Cho 2 số nguyên $a$ và $b$. Bạn hãy tìm 2 số sau:
+- Số thứ 1: là số lớn nhất $\le a$ mà chia hết cho $b$.
+- Số thứ 2: là số nhỏ nhất $\ge a$ mà chia hết cho $b$.
+
+*Chú ý:* Không được dùng vòng lặp.
+- Gợi ý công thức:
+  - Số thứ 1: `a / b * b`
+  - Số thứ 2: `(a + b - 1) / b * b` (hoặc kiểm tra `if (a % b == 0)` thì là `a`, ngược lại `(a / b + 1) * b`).
+  - Các phép chia đều là chia nguyên.
+
+### Input Format
+1 dòng chứa 2 số $a, b$.
+
+### Constraints
+$1 \le a, b \le 10^6$
+
+### Output Format
+- Dòng 1: in ra số thứ 1 cần tìm.
+- Dòng 2: in ra số thứ 2 cần tìm.
+
+### Sample Input 0
+```
+717 689
+```
+
+### Sample Output 0
+```
+689
+1378
+```
+
+---
+
+## [Kiểu dữ liệu-IF ELSE]. Bài 8. Luyện tập viết câu điều kiện
 
 Cho một số nguyên không âm $N$. Bạn hãy thực hiện viết câu lệnh để kiểm tra các điều kiện sau:
 1. $N$ có phải là số chẵn? (Kiểm tra số dư của $N$ với 2 và so sánh với 0)
@@ -151,84 +253,6 @@ NO
 NO
 YES
 YES
-```
-
----
-
-## [Kiểu dữ liệu-IF ELSE]. Bài 7. Số lớn nhất và nhỏ nhất
-
-Cho 2 số nguyên $a$ và $b$. Bạn hãy tìm 2 số sau:
-- Số thứ 1: là số lớn nhất $\le a$ mà chia hết cho $b$.
-- Số thứ 2: là số nhỏ nhất $\ge a$ mà chia hết cho $b$.
-
-*Chú ý:* Không được dùng vòng lặp.
-- Gợi ý công thức:
-  - Số thứ 1: `a / b * b`
-  - Số thứ 2: `(a + b - 1) / b * b` (hoặc kiểm tra `if (a % b == 0)` thì là `a`, ngược lại `(a / b + 1) * b`).
-  - Các phép chia đều là chia nguyên.
-
-### Input Format
-1 dòng chứa 2 số $a, b$.
-
-### Constraints
-$1 \le a, b \le 10^6$
-
-### Output Format
-- Dòng 1: in ra số thứ 1 cần tìm.
-- Dòng 2: in ra số thứ 2 cần tìm.
-
-### Sample Input 0
-```
-717 689
-```
-
-### Sample Output 0
-```
-689
-1378
-```
-
----
-
-## [Kiểu dữ liệu-IF ELSE]. Bài 8. Tổng, hiệu, tích, thương
-
-Nhập vào 2 số nguyên, in ra tổng, hiệu, tích, thương (lấy độ chính xác với 4 chữ số sau dấu phẩy) của 2 số đó.
-
-*Lưu ý:* Cần chú ý xử lý tràn số khi tính tích và trường hợp chia cho 0.
-
-### Input Format
-2 số nguyên $a, b$ trên 1 dòng.
-
-### Constraints
-$-10^8 \le a, b \le 10^8$
-
-### Output Format
-In ra tổng, hiệu, tích, thương trên từng dòng. Nếu trường hợp không thể tìm được thương của 2 số (chia cho 0) thì in ra `"INVALID"` cho dòng kết quả của thương.
-
-### Sample Input 0
-```
-7769 0
-```
-
-### Sample Output 0
-```
-7769
-7769
-0
-INVALID
-```
-
-### Sample Input 1
-```
-9794 1282
-```
-
-### Sample Output 1
-```
-11076
-8512
-12555908
-7.6396
 ```
 
 ---
@@ -376,7 +400,108 @@ In ra số năm, tuần, ngày tương ứng với $N$ ngày (cách nhau một k
 
 ---
 
-## [Kiểu dữ liệu-IF ELSE]. Bài 14. Xếp loại học sinh
+## [Kiểu dữ liệu-IF ELSE]. Bài 14. Kiểm tra chữ cái
+
+Cho một kí tự, bạn hãy kiểm tra kí tự nhập vào:
+- Chữ cái in hoa: in ra `"UPPER"`
+- Chữ cái in thường: in ra `"LOWER"`
+- Chữ số: in ra `"DIGIT"`
+- Kí tự đặc biệt (không phải chữ cái và chữ số): in ra `"SPECIAL"`
+
+### Input Format
+1 dòng chứa kí tự $c$.
+
+### Constraints
+$c$ là chữ in hoa, in thường, chữ số hoặc kí tự đặc biệt.
+
+### Output Format
+In ra kết quả phân loại tương ứng.
+
+### Sample Input 0
+```
+Z
+```
+
+### Sample Output 0
+```
+UPPER
+```
+
+---
+
+## [Kiểu dữ liệu-IF ELSE]. Bài 15. Chuyển đổi in hoa in thường
+
+Cho kí tự $c$:
+- Nếu $c$ là chữ cái in thường thì chuyển thành chữ cái in hoa tương ứng.
+- Nếu $c$ là chữ cái in hoa thì chuyển thành chữ cái in thường tương ứng.
+- Nếu không phải chữ cái thì giữ nguyên không đổi.
+
+### Input Format
+1 dòng chứa kí tự $c$.
+
+### Constraints
+$c$ có thể là chữ in hoa, in thường, chữ số hoặc kí tự đặc biệt.
+
+### Output Format
+In ra kết quả theo yêu cầu.
+
+### Sample Input 0
+```
+e
+```
+
+### Sample Output 0
+```
+E
+```
+
+### Sample Input 1
+```
+$
+```
+
+### Sample Output 1
+```
+$
+```
+
+---
+## [Kiểu dữ liệu-IF ELSE]. Bài 16. Kí tự kế tiếp
+
+Cho kí tự $c$ là chữ cái in hoa hoặc in thường, in ra kí tự kế tiếp sau nó trong bảng chữ cái ở dạng **in thường**. Kí tự kế tiếp của chữ `Z` (hoặc `z`) được coi là chữ `a`.
+
+### Input Format
+1 dòng chứa kí tự $c$.
+
+### Constraints
+$c$ là chữ cái in hoa hoặc in thường.
+
+### Output Format
+In ra chữ cái kế tiếp ở dạng in thường.
+
+### Sample Input 0
+```
+A
+```
+
+### Sample Output 0
+```
+b
+```
+
+### Sample Input 1
+```
+z
+```
+
+### Sample Output 1
+```
+a
+```
+
+---
+
+## [Kiểu dữ liệu-IF ELSE]. Bài 17. Xếp loại học sinh
 
 **Yêu cầu:** Cho biết điểm kiểm tra Tin học của 1 em học sinh (2 con điểm hệ số 1, 1 con điểm hệ số 2, 1 con điểm hệ số 3). In ra kết quả học tập môn Tin học của em đó theo quy tắc:
 - Điểm trung bình $\ge 8$: Giỏi (`GIOI`)
@@ -415,136 +540,7 @@ TRUNG BINH
 
 ---
 
-## [Kiểu dữ liệu-IF ELSE]. Bài 15. Mua nước
-
-28tech muốn nấu một món súp. Để làm điều đó, anh ta cần mua chính xác $n$ lít nước. Chỉ có hai loại chai nước trong cửa hàng gần đó: chai 1 lít và chai 2 lít (số lượng mỗi loại không giới hạn). Chai loại thứ nhất có giá $a$ burles và chai loại thứ hai có giá $b$ burles.
-
-Nhiệm vụ của bạn là tìm ra số tiền tối thiểu (bằng burles) để mua chính xác $n$ lít nước.
-
-### Input Format
-3 số nguyên $n, a, b$.
-
-### Constraints
-$1 \le n \le 10^{12}$; $1 \le a, b \le 1000$
-
-### Output Format
-Số tiền ít nhất để mua được đúng $n$ lít nước.
-
-### Sample Input 0
-```
-10 1 3
-```
-
-### Sample Output 0
-```
-10
-```
-
----
-
-## [Kiểu dữ liệu-IF ELSE]. Bài 16. Kí tự kế tiếp
-
-Cho kí tự $c$ là chữ cái in hoa hoặc in thường, in ra kí tự kế tiếp sau nó trong bảng chữ cái ở dạng **in thường**. Kí tự kế tiếp của chữ `Z` (hoặc `z`) được coi là chữ `a`.
-
-### Input Format
-1 dòng chứa kí tự $c$.
-
-### Constraints
-$c$ là chữ cái in hoa hoặc in thường.
-
-### Output Format
-In ra chữ cái kế tiếp ở dạng in thường.
-
-### Sample Input 0
-```
-A
-```
-
-### Sample Output 0
-```
-b
-```
-
-### Sample Input 1
-```
-z
-```
-
-### Sample Output 1
-```
-a
-```
-
----
-
-## [Kiểu dữ liệu-IF ELSE]. Bài 17. Kiểm tra chữ cái
-
-Cho một kí tự, bạn hãy kiểm tra kí tự nhập vào:
-- Chữ cái in hoa: in ra `"UPPER"`
-- Chữ cái in thường: in ra `"LOWER"`
-- Chữ số: in ra `"DIGIT"`
-- Kí tự đặc biệt (không phải chữ cái và chữ số): in ra `"SPECIAL"`
-
-### Input Format
-1 dòng chứa kí tự $c$.
-
-### Constraints
-$c$ là chữ in hoa, in thường, chữ số hoặc kí tự đặc biệt.
-
-### Output Format
-In ra kết quả phân loại tương ứng.
-
-### Sample Input 0
-```
-Z
-```
-
-### Sample Output 0
-```
-UPPER
-```
-
----
-
-## [Kiểu dữ liệu-IF ELSE]. Bài 18. Chuyển đổi in hoa in thường
-
-Cho kí tự $c$:
-- Nếu $c$ là chữ cái in thường thì chuyển thành chữ cái in hoa tương ứng.
-- Nếu $c$ là chữ cái in hoa thì chuyển thành chữ cái in thường tương ứng.
-- Nếu không phải chữ cái thì giữ nguyên không đổi.
-
-### Input Format
-1 dòng chứa kí tự $c$.
-
-### Constraints
-$c$ có thể là chữ in hoa, in thường, chữ số hoặc kí tự đặc biệt.
-
-### Output Format
-In ra kết quả theo yêu cầu.
-
-### Sample Input 0
-```
-e
-```
-
-### Sample Output 0
-```
-E
-```
-
-### Sample Input 1
-```
-$
-```
-
-### Sample Output 1
-```
-$
-```
-
----
-
-## [Kiểu dữ liệu-IF ELSE]. Bài 19. Domino
+## [Kiểu dữ liệu-IF ELSE]. Bài 18. Domino
 
 Bạn được cung cấp một bảng hình chữ nhật kích thước $M \times N$ hình vuông đơn vị, và không giới hạn các thanh domino kích thước $2 \times 1$. Bạn được phép xoay thanh domino. Tìm số lượng domino tối đa có thể đặt lên bảng sao cho:
 1. Mỗi domino bao trùm đúng 2 ô vuông đơn vị.
@@ -580,9 +576,7 @@ In ra số thanh domino tối đa có thể đặt.
 4
 ```
 
----
-
-## [Kiểu dữ liệu-IF ELSE]. Bài 20. Lát đá quảng trường
+## [Kiểu dữ liệu-IF ELSE]. Bài 19. Lát đá quảng trường
 
 Quảng trường Nhà hát ở thủ đô Berland có hình chữ nhật kích thước $n \times m$ mét. Nhân dịp kỷ niệm thành phố, người ta quyết định lát quảng trường bằng những viên đá granit hình vuông kích thước $a \times a$.
 
@@ -609,7 +603,7 @@ Viết số lượng viên đá cần thiết để lát kín quảng trường.
 
 ---
 
-## [Kiểu dữ liệu-IF ELSE]. Bài 21. Frog
+## [Kiểu dữ liệu-IF ELSE]. Bài 20. Frog
 
 Một con ếch hiện đang ở điểm 0 trên trục tọa độ $Ox$. Thuật toán nhảy của nó như sau:
 - Bước nhảy lẻ (1, 3, 5,...): nhảy $a$ đơn vị sang phải ($+a$).
@@ -634,6 +628,33 @@ Vị trí của con ếch sau $k$ bước nhảy.
 ### Sample Output 0
 ```
 8
+```
+
+---
+
+## [Kiểu dữ liệu-IF ELSE]. Bài 21. Mua nước
+
+28tech muốn nấu một món súp. Để làm điều đó, anh ta cần mua chính xác $n$ lít nước. Chỉ có hai loại chai nước trong cửa hàng gần đó: chai 1 lít và chai 2 lít (số lượng mỗi loại không giới hạn). Chai loại thứ nhất có giá $a$ burles và chai loại thứ hai có giá $b$ burles.
+
+Nhiệm vụ của bạn là tìm ra số tiền tối thiểu (bằng burles) để mua chính xác $n$ lít nước.
+
+### Input Format
+3 số nguyên $n, a, b$.
+
+### Constraints
+$1 \le n \le 10^{12}$; $1 \le a, b \le 1000$
+
+### Output Format
+Số tiền ít nhất để mua được đúng $n$ lít nước.
+
+### Sample Input 0
+```
+10 1 3
+```
+
+### Sample Output 0
+```
+10
 ```
 
 ---
@@ -689,7 +710,6 @@ Số lượng bước di chuyển tối thiểu là bội số của $m$. Nếu 
 ```
 
 ---
-
 ## [Kiểu dữ liệu-IF ELSE]. Bài 24. Đường đi ngắn nhất
 
 Patrick cần đi từ nhà mình ghé thăm cả 2 cửa hàng gần nhà và sau đó quay trở về nhà:
@@ -823,7 +843,6 @@ In ra tổng của cấp số cộng.
 ```
 
 ---
-
 ## [Kiểu dữ liệu-IF ELSE]. Bài 29. Cấp số nhân
 
 Cho 4 số $a, b, c, d$. Hãy kiểm tra xem 4 số này theo thứ tự có tạo thành một cấp số nhân với công bội nguyên hay không.
@@ -876,31 +895,113 @@ In ra kết quả của bài toán.
 
 ---
 
-## [C++ Test 1]. Problem E. Giải phương trình bậc 2
+## [Kiểu dữ liệu-IF ELSE]. Bài 31. 
 
-Cho phương trình $ax^2 + bx + c = 0$. Hãy giải phương trình bậc 2 trên:
-- Nếu phương trình vô nghiệm: in ra `"VO NGHIEM"`.
-- Nếu phương trình có vô số nghiệm: in ra `"VO SO NGHIEM"`.
-- Nếu phương trình có nghiệm duy nhất hoặc nghiệm kép: in ra 1 nghiệm duy nhất đó.
-- Nếu phương trình có 2 nghiệm phân biệt: in ra nghiệm nhỏ hơn trước, nghiệm lớn hơn sau (cách nhau 1 dấu cách).
-
-*Lưu ý:* Các nghiệm in ra lấy độ chính xác 2 chữ số sau dấu phẩy. Chú ý xét đầy đủ các trường hợp khi $a = 0$ và $a \ne 0$.
+Bizon the Champion được gọi là Champion vì một lý do. Bizon the Champion gần đây đã có một món quà - một tủ kính mới với $n$ kệ và anh quyết định đặt tất cả những món quà của mình ở đó. Tất cả các món quà có thể được chia thành hai loại: huy chương và cúp. Bizon the Champion có $a1$ cúp giải nhất, $a2$ cúp giải nhì và $a3$ cúp giải ba. Bên cạnh đó, anh có $b1$ huy chương giải nhất, $b2$ huy chương giải nhì và $b3$ huy chương giải ba. Đương nhiên, phần thưởng trong tủ phải sắp xếp cho thật đẹp, đó là lý do Bizon the Champion quyết định tuân theo các quy tắc: bất kỳ kệ nào cũng không thể chứa cả cúp và huy chương cùng một lúc; không có kệ có thể chứa nhiều hơn năm cúp; không có kệ có thể có hơn mười huy chương. Giúp Bizon the Champion tìm hiểu xem chúng tôi có thể đặt tất cả các phần thưởng để tất cả các điều kiện được đáp ứng hay không.
 
 ### Input Format
-Dòng duy nhất chứa 3 số thực $a, b, c$.
+
+Dòng đầu tiên chứa các số nguyên $a1$, $a2$ và $a3$. Dòng thứ hai chứa các số nguyên $b1$, $b2$ và $b3$ ($0 \le b1, b2, b3 \le 100$). Dòng thứ ba chứa số nguyên $n$. Các số trong các dòng được phân tách bằng khoảng trắng đơn.
 
 ### Constraints
-$-100 \le a, b, c \le 100$
+
+$0 \le a1, a2, a3 \le 100$; $1 \le n \le 100$;
 
 ### Output Format
-In ra đáp án của bài toán.
+
+In "YES" (không có dấu ngoặc kép) nếu tất cả các phần thưởng có thể được đưa lên kệ theo cách được mô tả. Nếu không, hãy in "NO" (không có dấu ngoặc kép).
 
 ### Sample Input 0
+
+```text
+46 76 52 40 60 67
+11
 ```
-3 8 4
+
+___
+## [Kiểu dữ liệu-IF ELSE]. Bài 32. Ghép số
+
+Gần đây Anton tìm thấy một hộp có chữ số trong phòng của mình. Có $k2$ chữ số $2$, $k3$ chữ số $3$, $k5$ chữ số $5$ và $k6$ chữ số $6$. Số nguyên yêu thích của Anton là $32$ và $256$. Anh quyết định soạn số nguyên này từ các chữ số anh có. Anh ta muốn làm cho tổng của các số nguyên này càng lớn càng tốt. Giúp anh ta giải quyết nhiệm vụ này! Mỗi chữ số có thể được sử dụng không quá một lần, tức là các số nguyên tổng hợp nên chứa không quá $k2$ chữ số $2$, $k3$ chữ số $3$, v.v. Tất nhiên, các chữ số không sử dụng không được tính vào tổng.
+
+### Input Format
+
+Dòng duy nhất của đầu vào chứa bốn số nguyên $k2$, $k3$, $k5$ và $k6$ - số chữ số $2$, $3$, $5$ và $6$ tương ứng.
+
+### Constraints
+
+$0 \le k2, k3, k5, k6 \le 10^9$.
+
+### Output Format
+
+In một số nguyên - tổng số tối đa có thể có của các số nguyên yêu thích của Anton có thể được tạo bằng các chữ số từ hộp.
+
+### Sample Input 0
+
+```
+5 1 3 4
 ```
 
 ### Sample Output 0
+
 ```
--2.00 -0.67
+800
+```
+## [Kiểu dữ liệu-IF ELSE]. Bài 33. Chia tiền
+
+Polycarp có ba chị em: Alice, Barbara và Cerene. Họ đang thu thập tiền xu. Hiện tại, Alice có một đồng tiền, Barbara có tiền xu và Cerene có tiền xu. Gần đây Polycarp đã trở về từ chuyến đi vòng quanh thế giới và mang theo $n$ xu. Anh ta muốn phân phối tất cả $n$ xu này giữa các chị em của mình theo cách mà số lượng tiền Alice có bằng số lượng tiền mà Barbara có và bằng với số lượng tiền mà Cerene có. Nói cách khác, nếu Polycarp đưa $A$ xu cho Alice, $B$ xu cho Barbara và $C$ xu cho Cerene ($A + B + C = n$), thì $a + A = b + B = c + C$. Lưu ý rằng $A$, $B$ hoặc $C$ (số lượng tiền mà Polycarp đưa cho Alice, Barbara và Cerene tương ứng) có thể là $0$. Nhiệm vụ của bạn là tìm hiểu xem có thể phân phối tất cả $n$ xu giữa các chị em theo cách được mô tả ở trên không.
+
+### Input Format
+
+4 số nguyên trên 1 dòng $a$, $b$, $c$, $n$.
+
+### Constraints
+
+$1 \le a, b, c, n \le 10^8$
+
+### Output Format
+
+In "YES" nếu Polycarp có thể phân phối tất cả $n$ xu giữa các chị em của mình và "NO" nếu không.
+
+### Sample Input 0
+
+```
+5 3 2 8
+
+```
+
+### Sample Output 0
+
+```
+NO
+
+```
+---
+
+## [Kiểu dữ liệu-IF ELSE]. Bài 35. HPNY
+
+Năm mới sắp đến và bạn rất hào hứng muốn biết còn lại bao nhiêu phút trước Tết. Bạn biết rằng hiện tại đồng hồ hiển thị $h$ giờ và $m$ phút, trong đó $0 \le hh < 24$ và $0 \le mm < 60$. Chúng tôi sử dụng định dạng thời gian 24 giờ! Nhiệm vụ của bạn là tìm số phút trước Tết. Bạn biết rằng năm mới đến khi đồng hồ hiển thị 0 giờ và 0 phút.
+
+### Input Format
+
+2 số nguyên không âm $h$ và $m$.
+
+### Constraints
+
+$0 \le h < 24$; $0 \le m < 60$;
+
+### Output Format
+
+In ra đáp án của bài toán
+
+### Sample Input 0
+
+```
+23 0
+
+```
+
+### Sample Output 0
+
+```
+60
 ```
