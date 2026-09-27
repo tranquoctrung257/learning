@@ -1,11 +1,13 @@
 #include <bits/stdc++.h>
+
 using namespace std;
+using ll = long long;
 
 int main(){
 	int n; cin >> n;
-	long long tong = 1;
-	for(int i = 1; i <= n; i++){
-		tong *= i;
+	ll tong = 0;
+	for(int i = 1; i <= n;i++){
+		tong += 2*i;
 	}
 	cout << tong << endl;
 }

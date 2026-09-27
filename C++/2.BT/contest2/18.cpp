@@ -1,9 +1,10 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
+using ll = long long;
 
 int main(){
-	long long n;cin >> n;
+	ll n; cin >> n;
 	int dem = 0;
 	while(n != 0){
 		int r = n % 10;

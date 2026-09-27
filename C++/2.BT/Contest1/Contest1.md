@@ -976,6 +976,35 @@ NO
 
 ```
 ---
+## [Kiểu dữ liệu-IF ELSE]. Bài 34. SỰ hào phóng
+
+Có năm người chơi một trò chơi gọi là "Sự hào phóng". Mỗi người đưa ra một số lượng tiền xu khác nhau $b$ như một lần đặt cược ban đầu. Sau khi tất cả người chơi đặt cược tiền xu của họ, thao tác sau được lặp lại nhiều lần: một đồng xu được chuyển từ người chơi này sang người chơi khác. Nhiệm vụ của bạn là viết một chương trình có thể, với số lượng xu mà mỗi người chơi có vào cuối trò chơi, xác định kích thước $b$ của lần đặt cược ban đầu hoặc chỉ ra rằng kết quả của trò chơi không thể đạt được.
+
+### Input Format
+
+Đầu vào bao gồm một dòng duy nhất chứa năm số nguyên $c_1, c_2, c_3, c_4$ và $c_5$ - số lượng đồng xu mà người chơi thứ nhất, thứ hai, thứ ba, thứ tư và thứ năm có ở cuối trò chơi.
+
+### Constraints
+
+$0 \le c_1, c_2, c_3, c_4, c_5 \le 100$
+
+### Output Format
+
+In dòng duy nhất chứa một số nguyên dương $b$ duy nhất - số xu trong đặt cược ban đầu của mỗi người chơi. Nếu không có giá trị $b$ như vậy, thì hãy in giá trị duy nhất "-1".
+
+## Sample Input 0
+
+```
+2 5 4 0 4
+```
+## Sample Output 0
+
+```
+3
+```
+
+
+---
 
 ## [Kiểu dữ liệu-IF ELSE]. Bài 35. HPNY
 
